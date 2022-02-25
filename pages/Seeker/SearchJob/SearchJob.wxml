@@ -1,0 +1,143 @@
+<!--背景-->
+<view style="width: 750rpx;height: 100vh;background-color: #dbf6e9;z-index: -1;">
+
+<!--顶部导航栏-->
+<view style="width: 750rpx;height: 145rpx;border-bottom-left-radius: 30rpx;border-bottom-right-radius: 30rpx;background-color: #9ddfd3;">
+<!--总体内容按列排-->
+<view style="display: flex;flex-direction: column;">
+
+<!--第一行内容-->
+<view style="display: flex;flex-direction: row;">
+<view style="width: 50rpx;height: 50rpx;margin-left: 30rpx;background-color: #dbf6e9;border-radius: 10rpx;">
+  <image style="width: 40rpx;height: 40rpx;margin-left: 5rpx;margin-top: 5rpx;" src="../../../images/icon/search_b.png"></image>
+</view>
+<!--这个应该是input-->
+<view style="margin-left: 20rpx;width: 270rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;"></view>
+<view style="margin-left: 10rpx;width: 90rpx;height: 50rpx;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;background-color: #dbf6e9;font-size: 18rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;">搜索</view>
+</view>
+<!--第一行内容-->
+<!--第二行内容-->
+<view style="display: flex;flex-direction: row;">
+<view style="width: 50rpx;height: 50rpx;background-color: #31326f;margin-left: 30rpx;margin-top: 20rpx;border-radius: 10rpx;">
+<image style="width: 40rpx;height: 40rpx;margin-left: 5rpx;margin-top: 5rpx;" src="../../../images/icon/hot_y.png"></image>
+</view>
+<view style="margin-left: 20rpx;margin-top: 20rpx;width: 46rpx;height: 46rpx;background-color: #dbf6e9;border: solid 4rpx #31326f;border-radius: 10rpx;">
+  <image style="width: 40rpx;height: 40rpx;margin-left: 5rpx;margin-top: 5rpx;" src="../../../images/icon/hot_b.png"></image>
+</view>
+
+<view style="margin-left: 20rpx;margin-top: 20rpx;width: 46rpx;height: 46rpx;background-color: #dbf6e9;border: solid 4rpx #31326f;border-radius: 10rpx;">
+  <image style="width: 40rpx;height: 40rpx;margin-left: 5rpx;margin-top: 5rpx;" src="../../../images/icon/firm_b.png"></image>
+</view>
+
+<view style="margin-left: 20rpx;margin-top: 20rpx;width: 46rpx;height: 46rpx;background-color: #dbf6e9;border: solid 4rpx #31326f;border-radius: 10rpx;">
+  <image style="width: 40rpx;height: 40rpx;margin-left: 5rpx;margin-top: 5rpx;" src="../../../images/icon/job_b.png"></image>
+</view>
+
+<view style="width: 150rpx;height: 50rpx;border-radius: 10rpx;background-color: #31326f;margin-left: 20rpx;margin-top: 20rpx;font-size: 18rpx;font-weight: 700;color:white;text-align: center;line-height: 50rpx;">
+我的简历
+</view>
+
+</view>
+<!--第二行内容-->
+</view>
+<!--总体内容按列排-->
+</view>
+<!--顶部导航栏-->
+
+<view style="width: 10rpx;height: 20rpx;"></view><!--间隔-->
+
+<scroll-view scroll-y="{{true}}" style="width: 690rpx;height: 70vh;margin: auto;">
+<!--内推官名片-->
+<!--卡片：按列排-->
+<view style="width: 600rpx; height: 240rpx; background-color: #ffc93c;border-top-left-radius: 60rpx;border-top-right-radius: 10rpx;border-bottom-left-radius: 10rpx;border-bottom-right-radius: 100rpx;display: flex;flex-direction: column;margin:0 auto;">
+
+<!--头像文字按行排-->
+<view style="display: flex;flex-direction: row;">
+<!--头像-->
+<view style="border-radius: 50%;width: 90rpx;height: 90rpx;border: solid 10rpx #dbf6e9;"></view>
+<!--头像-->
+
+<!--姓名和职位：按列排-->
+<view style="display: flex;flex-direction: column;margin-left: 30rpx;margin-top: 20rpx;">
+<view style="font-size: 26rpx;font-weight: 700;color: #31326f;">朱寒婷</view>
+
+<!--公司职位：按行排-->
+<view style="display: flex;flex-direction: row;margin-top: 15rpx;">
+<view style="font-size: 22rpx;font-weight: 700;color: #0084b7;">字节跳动</view>
+<view style="width: 20rpx;height: 20rpx;"></view>
+<view style="width: 7rpx;height: 25rpx;background-color: #31326f;"></view>
+<view style="width: 20rpx;height: 20rpx;"></view>
+<view style="font-size: 22rpx;font-weight: 700;color: #0084b7;">大数据产品经理</view>
+</view>
+<!--公司职位：按行排-->
+</view>
+<!--姓名和职位：按列排-->
+</view>
+<!--头像文字按行排-->
+
+<!--其他内容按行排-->
+<view style="display: flex;flex-direction: row;">
+<!--内推岗位-->
+<view style="width: 220rpx;height: 90rpx;border-radius: 10rpx;background-color: #dbf6e9;margin-top: 20rpx;margin-left: 20rpx;display: flex;flex-direction: column;">
+<view style="font-size: 18rpx;font-weight: 700;color: #0084b7;width: 220prx;height: 45rpx;text-align: center;line-height: 45rpx;">内推岗位</view>
+<view style="font-size: 22rpx;font-weight: 700;color: #31326f;width: 220rpx;height: 45rpx;text-align: center;line-height: 45rpx;">大数据工程师</view>
+</view>
+<!--内推岗位-->
+
+<!--包裹详情和联系，因为这两个不好排版-->
+<view style="display: flex;">
+<!--联系-->
+<view style="width: 200rpx;height: 50rpx;border-radius: 10rpx;background-color: #31326f;position: relative;top: 80rpx;left: 80rpx;z-index: 2;">
+<view style="height: 50rpx;font-size: 18rpx;font-weight: 700;color: #ffc93c;margin-left: 60rpx;line-height: 50rpx;">联系</view>
+</view>
+<!--联系-->
+<!--详情圆片-->
+<view style="border-radius: 50%;width: 140rpx;height: 140rpx;border: 10rpx solid #dbf6e9;position: relative; right: 0rpx;bottom: 30rpx;background-color: #31326f;z-index: 3;">
+<view style="display:flex;flex-direction: column;">
+<view style="margin-top: 20rpx;margin-left: 45rpx;">
+<image style="width: 50rpx;height: 50rpx;" src="../../../images/icon/details_w.png"></image>
+</view> 
+<view style="font-size: 18rpx;font-weight: 700;color: #ffc93c;margin-left: 50rpx;;">详情</view>
+</view>
+</view>
+<!--详情圆片-->
+</view>
+<!--包裹详情和联系，因为这两个不好排版-->
+</view>
+<!--其他内容按行排-->
+</view>
+<!--卡片：按列排-->
+<!--内推官名片-->
+</scroll-view>
+
+
+
+<!--底部导航栏-->
+<view style="width: 600rpx;height: 100rpx;border: solid 10rpx #dbf6e9;background-color: #31326f;border-radius: 55rpx;position: fixed;bottom: 40rpx;left: 65rpx;display: flex;">
+<!--聊天-->
+<view class="talkBtn" hover-class="talkBtn-hover">
+<image style="display: block;margin:auto;width: 60rpx;height: 60rpx;" src="../../../images/icon/discuss_w.png"></image>
+</view>
+<!--聊天-->
+
+
+
+
+<!--个人中心-->
+<view class="centerBtn" hover-class="centerBtn-hover" bindtap="toCenter">
+<image style="display: block;margin: auto;width: 60rpx;height: 60rpx;" src="../../../images/icon/me_w.png"></image>
+</view>
+<!--个人中心-->
+</view>
+<!--底部导航栏-->
+
+<!--搜索-->
+<view class="serchBtn-hover">
+<image style="width: 100rpx;height: 100rpx; margin-top: 20rpx;margin-left: 20rpx;" src="../../../images/icon/search_y.png"></image>
+</view>
+<!--搜索-->
+
+
+
+</view>
+<!--背景-->

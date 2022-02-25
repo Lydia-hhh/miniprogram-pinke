@@ -1,0 +1,50 @@
+.tabBox-0{
+  width: 270rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  background-color: #dbf6e9;
+  font-size: 26rpx;
+  font-weight: 700;
+  color: #31326f;
+  text-align: center;
+  line-height: 60rpx;
+}
+.tabBox-1{
+  width: 300rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #dbf6e9;
+  font-weight: 700;
+  font-size: 26rpx;
+}
+.centerBtn{
+  width: 300rpx;
+  height: 100rpx;
+  border-top-left-radius: 55rpx;
+  border-bottom-left-radius: 55rpx;
+}
+.centerBtn-hover{
+  width: 300rpx;
+  height: 100rpx;
+  border-top-left-radius: 55rpx;
+  border-bottom-left-radius: 55rpx;
+  background-color: #0084b7;
+}
+.deleteBtn{
+  width: 300rpx;
+  height: 100rpx;
+  border-top-right-radius: 55rpx;
+  border-bottom-right-radius: 55rpx;
+
+}
+
+.deleteBtn-hover{
+  width: 300rpx;
+  height: 100rpx;
+  border-top-right-radius: 55rpx;
+  border-bottom-right-radius: 55rpx;
+  background-color: #0084b7;
+}

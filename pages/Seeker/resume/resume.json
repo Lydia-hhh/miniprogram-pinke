@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "EduContent":"../../../components/EduContent/EduContent"
+  }
+}

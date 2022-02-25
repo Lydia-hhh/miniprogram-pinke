@@ -1,0 +1,95 @@
+.font-w{
+  width: 200rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #31326f;
+}
+.font-w-hover{
+  width: 200rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #ffc93c;
+}
+.searchBtn{
+  border-radius: 50%;
+  width: 140rpx;
+  height: 140rpx;
+  background-color: #31326f;
+  border: solid 10rpx #dbf6e9;
+  position: relative;
+  left: 225rpx;
+  bottom: 170rpx;
+  position: fixed;
+  bottom: 90rpx;
+  left: 300rpx;
+}
+.searchBtn-hover{
+  border-radius: 50%;
+  width: 140rpx;
+  height: 140rpx;
+  background-color: #0084b7;
+  border: solid 10rpx #dbf6e9;
+  position: relative;
+  left: 225rpx;
+  bottom: 170rpx;
+  position: fixed;
+  bottom: 90rpx;
+  left: 300rpx;
+}
+.talkBtn{
+  width: 300rpx;
+  height: 100rpx;
+  align-items: center;
+  display: flex;
+  border-top-left-radius: 55rpx;
+  border-bottom-left-radius: 55rpx;
+}
+.talkBtn-hover{
+  width: 300rpx;
+  height: 100rpx;
+  align-items: center;
+  display: flex;
+  border-top-left-radius: 55rpx;
+  border-bottom-left-radius: 55rpx;
+  background-color: #0084b7;
+}
+.centerBtn{
+  width: 300rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 55rpx;
+  border-bottom-right-radius: 55rpx;
+}
+.centerBtn-hover{
+  width: 300rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 55rpx;
+  border-bottom-right-radius: 55rpx;
+  background-color: #0084b7;
+}
+.changeBtn{
+  border-radius: 50%;
+  background-color: #dbf6e9;
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+
+}
+
+.changeBtn-hover{
+  border-radius: 50%;
+  background-color: #ffc93c;
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+
+}

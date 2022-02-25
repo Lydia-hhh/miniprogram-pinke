@@ -1,0 +1,108 @@
+
+<!--背景-->
+<view style="width: 750rpx;height: 100vh;background-color: #dbf6e9;z-index: -2;">
+<!--顶部颜色-->
+<view style="width: 750rpx;height: 100rpx;background-color: #9ddfd3;z-index: -1;"></view>
+<!--顶部颜色-->
+
+<!--头像-->
+<view style="z-index: 1;border-radius: 50%;width: 180rpx;height: 180rpx;border: solid 20rpx #dbf6e9;background-color: white;position: fixed;top: 0;left: 30rpx;"></view>
+<!--头像-->
+
+<!--导航按列排-->
+<view style="display: flex;flex-direction: column;margin-top: 20rpx;z-index: 0;">
+<!--我的求职者-->
+<view style="width: 675rpx;height: 160rpx;border-top-right-radius: 80rpx;border-bottom-right-radius: 80rpx;background-color: #ffc93c;">
+<view style="display: flex;flex-direction: row;margin-left: 250rpx;">
+<view style="display: block;margin-top: 45rpx;height: 160rpx;width: 60rpx;">
+<image style="width: 70rpx;height: 70rpx;display: block;margin: auto;" src="../../../images/icon/business_b.png"></image>
+</view>
+<view style="width: 30rpx;"></view>
+<view class="font-w" hover-class="font-w-hover" bindtap="toWorker">我的求职者</view>
+<view style="margin-top: 50rpx;margin-left: 55rpx;">
+<image bindtap="toWorker" style="width: 60rpx;height: 60rpx;" src="../../../images/icon/arrow_w.png"></image>
+</view>
+</view>
+</view>
+<!--我的求职者-->
+
+<!--我的发布-->
+<view style="width: 675rpx;height: 160rpx;border-top-right-radius: 80rpx;border-bottom-right-radius: 80rpx;background-color: #ffc93c;margin-top: 20rpx;">
+  <view style="display: flex;flex-direction: row;margin-left: 250rpx;">
+<view style="display: block;margin-top: 50rpx;height: 160rpx;width: 60rpx;">
+<image style="width: 60rpx;height: 60rpx;display: block;margin: auto;" src="../../../images/icon/plane_b.png"></image>
+</view>
+<view style="width: 30rpx;"></view>
+<view class="font-w" hover-class="font-w-hover" bindtap="toPublish">我的发布</view>
+<view style="margin-top: 50rpx;margin-left: 55rpx;">
+<image bindtap="toPublish" style="width: 60rpx;height: 60rpx;" src="../../../images/icon/arrow_w.png"></image>
+</view>
+</view>
+</view>
+<!--我的发布-->
+
+<!--内推岗位-->
+<view style="width: 675rpx;height: 160rpx;border-top-right-radius: 80rpx;border-bottom-right-radius: 80rpx;background-color: #ffc93c;margin-top: 20rpx;">
+  <view style="display: flex;flex-direction: row;margin-left: 250rpx;">
+<view style="display: block;margin-top: 50rpx;height: 160rpx;width: 60rpx;">
+<image style="width: 60rpx;height: 60rpx;display: block;margin: auto;" src="../../../images/icon/job_b.png"></image>
+</view>
+<view style="width: 30rpx;"></view>
+<view class="font-w" hover-class="font-w-hover" bindtap="toJob">内推岗位</view>
+<view style="margin-top: 50rpx;margin-left: 55rpx;">
+<image bindtap="toJob" style="width: 60rpx;height: 60rpx;" src="../../../images/icon/arrow_w.png"></image>
+</view>
+</view>
+</view>
+<!--内推岗位-->
+
+<!--我的名片-->
+<view style="width: 675rpx;height: 160rpx;border-top-right-radius: 80rpx;border-bottom-right-radius: 80rpx;background-color: #ffc93c;margin-top: 20rpx;">
+  <view style="display: flex;flex-direction: row;margin-left: 250rpx;">
+<view style="display: block;margin-top: 50rpx;height: 160rpx;width: 60rpx;">
+<image style="width: 60rpx;height: 60rpx;display: block;margin: auto;" src="../../../images/icon/card_b.png"></image>
+</view>
+<view style="width: 30rpx;"></view>
+<view class="font-w" hover-class="font-w-hover" bindtap="toCard">我的名片</view>
+<view style="margin-top: 50rpx;margin-left: 55rpx;">
+<image bindtap="toCard" style="width: 60rpx;height: 60rpx;" src="../../../images/icon/arrow_w.png"></image>
+</view>
+</view>
+</view>
+<!--我的名片-->
+
+<!--身份切换-->
+<view style="margin-top: 20rpx;margin-left: 390rpx;width: 360rpx;height: 160rpx;border-top-left-radius: 80rpx;border-bottom-left-radius: 80rpx;background-color: #0084b7;display: flex;flex-direction: row;">
+<view class="changeBtn" hover-class="changeBtn-hover" bindtap="toJobHunter">
+<image style="width: 60rpx;height: 60rpx;margin: 10rpx 10rpx;" src="../../../images/icon/change_blue.png"></image>
+</view>
+<view style="font-size: 24rpx;font-weight: 700;color: white;margin-top: 68rpx;margin-left: 20rpx;">切换为</view>
+<view style="font-size: 24rpx;font-weight: 700;color:#ffc93c;margin-top: 68rpx;">求职者</view>
+</view>
+<!--身份切换-->
+</view>
+<!--导航按列排-->
+
+<!--底部导航栏-->
+<view style="width: 600rpx;height: 100rpx;border: solid 10rpx #dbf6e9;background-color: #31326f;border-radius: 55rpx;position: fixed;bottom: 40rpx;left: 65rpx;display: flex;">
+<!--聊天-->
+<view class="talkBtn" hover-class="talkBtn-hover">
+<image style="display: block;margin:auto;width: 60rpx;height: 60rpx;" src="../../../images/icon/discuss_w.png"></image>
+</view>
+<!--聊天-->
+<!--个人中心-->
+<view class="centerBtn-hover" hover-class="centerBtn-hover">
+<image style="display: block;margin: auto;width: 60rpx;height: 60rpx;" src="../../../images/icon/me_w.png"></image>
+</view>
+<!--个人中心-->
+</view>
+<!--底部导航栏-->
+
+<!--搜索-->
+<view class="searchBtn" hover-class="searchBtn-hover" bindtap="toSearch">
+<image style="width: 100rpx;height: 100rpx; margin-top: 20rpx;margin-left: 20rpx;" src="../../../images/icon/search_y.png"></image>
+</view>
+<!--搜索-->
+
+</view>
+<!--背景-->

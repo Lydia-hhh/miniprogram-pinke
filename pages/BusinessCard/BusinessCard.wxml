@@ -1,0 +1,116 @@
+<!--背景-->
+<view style="width: 750rpx;height: 100vh;background-color: #dbf6e9;">
+  <view style="width: 140rpx;height: 140rpx;border-radius: 50%;background-color: #b1e5dc;border: solid 10rpx #dbf6e9;position: relative;left: 30rpx;bottom: 97vh;position: absolute;top: 40rpx;"></view>
+
+<!--按列进行排版-->
+<view style="display: flex;flex-direction: column;">
+<view style="width: 690rpx;height: 8vh;background-color: #9ddfd3;margin-left: 30rpx;border-radius: 10rpx;">
+<view style="display: flex;flex-direction: column;margin-left: 180rpx;">
+<view style="font-size: 32rpx;font-weight: 700;color: #31326f;margin-top: 15rpx;">Lyric</view>
+<!--标签栏-->
+<scroll-view scroll-x="true" style="margin-top: 10rpx;">
+<view style="height: 34rpx;width: 120rpx;border:solid 2rpx #ffc93c;font-size: 20rpx;font-weight: 700;color: #ffc93c;background-color: #31326f;border-radius: 10rpx;text-align: center;line-height: 34rpx;margin-right: 20rpx;">实名认证</view>
+</scroll-view>
+<!--标签栏-->
+</view>
+</view>
+<!--简历+轮播图-->
+<view style="width: 690rpx;height: 260rpx;background-color: #b1e5dc;margin-left: 30rpx;margin-top: 10rpx;border-top-left-radius: 10rpx;border-top-right-radius: 10rpx;">
+<!--固定卡片-->
+<view style="display: flex;flex-direction: column;width: 690rpx;height: 150rpx;margin-top: 110rpx;margin-left: 30rpx;">
+<view style="display: flex;flex-direction: row;">
+<view style="color: #31326f;font-size: 24rpx;font-weight: 700;line-height: 24rpx;">腾讯</view>
+<view style="width: 5rpx;height: 24rpx;background-color: #31326f;margin-left: 20rpx;margin-right: 20rpx;"></view>
+<view style="color: #31326f;font-size: 24rpx;font-weight: 700;line-height: 24rpx;">测试开发工程师</view>
+</view>
+<view style="height: 20rpx;"></view><!--间隔-->
+<view style="display: flex;flex-direction: row;">
+<view style="color: #0084b7;font-size: 24rpx;font-weight: 700;line-height: 24rpx;">职业方向：</view>
+<view style="color: #31326f;font-size: 24rpx;font-weight: 700;line-height: 24rpx;">IT互联网 测试</view>
+</view>
+<view style="height: 20rpx;"></view><!--间隔-->
+<view style="display: flex;flex-direction: row;">
+<view style="color: #0084b7;font-size: 24rpx;font-weight: 700;line-height: 24rpx;">所在地：</view>
+<view style="color: #31326f;font-size: 24rpx;font-weight: 700;line-height: 24rpx;">上海</view>
+<button style="width: 220rpx;height: 50rpx;border-radius: 10rpx;font-size: 22rpx;font-weight: 700;background-color: #0084b7;color: #dbf6e9;text-align: center;line-height: 50rpx;margin-left: 250rpx;">修改展示内容</button>
+</view>
+</view>
+<!--固定卡片-->
+</view>
+<scroll-view scroll-y="true" style="width: 690rpx;height: calc(82vh - 260rpx);background-color: #b1e5dc;margin-left: 30rpx;border-bottom-left-radius: 10rpx;border-bottom-right-radius: 10rpx;">
+<view style="width: 630rpx;height: 360rpx;margin-left: 30rpx;background-color: #9ddfd3;border-radius: 10rpx;display: flex;flex-direction:column ;">
+  <view style="width: 200rpx;height: 60rpx;background-color: #31326f;color: #ffc93c;font-size: 24rpx;font-weight: 700;text-align: center;line-height: 60rpx;border-radius: 10rpx;">教育经历</view>
+  <view style="height: 20rpx;"></view><!--间隔-->
+  <!--入学年份-->
+  <view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;">入学年份</view>
+<view style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"></view>
+</view>
+<!--入学年份-->
+
+<view style="height: 20rpx;"></view><!--间隔-->
+  <!--学校-->
+  <view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;">学校</view>
+<view style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"></view>
+</view>
+<!--学校-->
+
+<view style="height: 20rpx;"></view><!--间隔-->
+  <!--专业-->
+  <view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;">专业</view>
+<view style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"></view>
+</view>
+<!--专业-->
+
+<view style="height: 20rpx;"></view><!--间隔-->
+  <!--学位-->
+  <view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;">学位</view>
+<view style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"></view>
+</view>
+<!--学位-->
+</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+<view>测试</view>
+
+</scroll-view>
+<!--简历+轮播图-->
+<!--底部导航栏-->
+<view style="width: 600rpx;height: 90rpx;background-color: #31326f;border-radius: 45rpx;margin:20rpx auto;display: flex;flex-direction: row;">
+<!--简历页面-->
+<view class="resumeBtn" hover-class="resumeBtn-hover" bindtap="toResume">
+<image style="width: 60rpx;height: 60rpx;margin-top: 15rpx;margin-left: 65rpx;" src="../../images/icon/details_w.png"></image>
+</view>
+<!--简历页面-->
+
+<!--个人中心-->
+<view class="centerBtn" hover-class="centerBtn-hover" bindtap="toCenter">
+  <image style="width: 60rpx;height: 60rpx;margin-top: 15rpx;margin-left: 175rpx;" src="../../images/icon/me_w.png"></image>
+</view>
+<!--个人中心-->
+
+</view>
+<!--底部导航栏-->
+</view>
+<!--按列进行排版-->
+<!---->
+<!-- <view style="width: 140rpx;height: 140rpx;border-radius: 50%;background-color: #b1e5dc;border: solid 10rpx #dbf6e9;position: relative;left: 30rpx;bottom: 97vh;"></view> -->
+<!--头像-->
+</view>
+<!--背景-->

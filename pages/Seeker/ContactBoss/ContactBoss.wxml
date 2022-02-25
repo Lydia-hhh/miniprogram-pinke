@@ -1,0 +1,207 @@
+<!--背景-->
+<view style="width: 750rpx;height: 100vh;background-color: #dbf6e9;z-index: -5;">
+<!--排版-->
+<view style="display: flex;flex-direction: column;width: 750rpx;">
+<!--Tab标签-->
+<view style="width: 600rpx;height: 100rpx;border-radius: 50rpx;background-color: #31326f;margin-top: 20rpx;margin-left: 30rpx;display: flex;flex-direction: row;margin-left: 75rpx;">
+<view class="{{display_idx==0?'tabBox-0':'tabBox-1'}}" bindtap="displayChoose" data-idx="0">已通过</view>
+
+<view class="{{display_idx==1?'tabBox-0':'tabBox-1'}}" bindtap="displayChoose" data-idx="1">对你感兴趣</view>
+</view>
+<!--Tab标签-->
+<view style="width: 10rpx;height: 20rpx;"></view>
+
+<scroll-view scroll-y="{{true}}" style="width: 690rpx;height: 70vh;margin: auto;">
+<!--已通过-->
+<view wx:if="{{display_idx==0}}" style="display: flex;flex-direction: row;margin:0 auto;">
+<!--内推官名片-->
+<!--卡片：按列排-->
+<view style="width: 600rpx; height: 240rpx; background-color: #ffc93c;border-top-left-radius: 60rpx;border-top-right-radius: 10rpx;border-bottom-left-radius: 10rpx;border-bottom-right-radius: 100rpx;display: flex;flex-direction: column;margin:0 auto;">
+
+<!--头像文字按行排-->
+<view style="display: flex;flex-direction: row;">
+<!--头像-->
+<view style="border-radius: 50%;width: 90rpx;height: 90rpx;border: solid 10rpx #dbf6e9;"></view>
+<!--头像-->
+
+<!--姓名和职位：按列排-->
+<view style="display: flex;flex-direction: column;margin-left: 30rpx;margin-top: 20rpx;">
+<view style="font-size: 26rpx;font-weight: 700;color: #31326f;">朱寒婷</view>
+
+<!--公司职位：按行排-->
+<view style="display: flex;flex-direction: row;margin-top: 15rpx;">
+<view style="font-size: 22rpx;font-weight: 700;color: #0084b7;">字节跳动</view>
+<view style="width: 20rpx;height: 20rpx;"></view>
+<view style="width: 7rpx;height: 25rpx;background-color: #31326f;"></view>
+<view style="width: 20rpx;height: 20rpx;"></view>
+<view style="font-size: 22rpx;font-weight: 700;color: #0084b7;">大数据产品经理</view>
+</view>
+<!--公司职位：按行排-->
+</view>
+<!--姓名和职位：按列排-->
+</view>
+<!--头像文字按行排-->
+
+<!--其他内容按行排-->
+<view style="display: flex;flex-direction: row;">
+<!--内推岗位-->
+<view style="width: 220rpx;height: 90rpx;border-radius: 10rpx;background-color: #dbf6e9;margin-top: 20rpx;margin-left: 20rpx;display: flex;flex-direction: column;">
+<view style="font-size: 18rpx;font-weight: 700;color: #0084b7;width: 220prx;height: 45rpx;text-align: center;line-height: 45rpx;">内推岗位</view>
+<view style="font-size: 22rpx;font-weight: 700;color: #31326f;width: 220rpx;height: 45rpx;text-align: center;line-height: 45rpx;">大数据工程师</view>
+</view>
+<!--内推岗位-->
+
+<!--包裹详情和联系，因为这两个不好排版-->
+<view style="display: flex;">
+<!--联系-->
+<view style="width: 200rpx;height: 50rpx;border-radius: 10rpx;background-color: #31326f;position: relative;top: 80rpx;left: 80rpx;z-index: 2;">
+<view style="height: 50rpx;font-size: 18rpx;font-weight: 700;color: #ffc93c;margin-left: 60rpx;line-height: 50rpx;">联系</view>
+</view>
+<!--联系-->
+<!--详情圆片-->
+<view style="border-radius: 50%;width: 140rpx;height: 140rpx;border: 10rpx solid #dbf6e9;position: relative; right: 0rpx;bottom: 30rpx;background-color: #31326f;z-index: 3;">
+<view style="display:flex;flex-direction: column;">
+<view style="margin-top: 20rpx;margin-left: 45rpx;">
+<image style="width: 50rpx;height: 50rpx;" src="../../../images/icon/accept_y.png"></image>
+</view> 
+<view style="font-size: 18rpx;font-weight: 700;color: #ffc93c;margin-left: 50rpx;;">通过</view>
+</view>
+</view>
+<!--详情圆片-->
+</view>
+<!--包裹详情和联系，因为这两个不好排版-->
+</view>
+<!--其他内容按行排-->
+</view>
+<!--卡片：按列排-->
+<!--内推官名片-->
+<!--删除-->
+<view wx:if="{{showDelete==1}}" style="width: 60rpx;height: 240rpx;border-radius: 10rpx;background-color: #31326f;margin-left: 30rpx;">
+<view style="margin-top: 95rpx;margin-left: 5rpx;">
+<image style="width: 50rpx;height: 50rpx;" src="../../../images/icon/bin_y.png"></image>
+</view>
+</view>
+<!--删除-->
+</view>
+<!--已通过-->
+
+<!--对你感兴趣-->
+<view wx:if="{{display_idx==1}}" style="display: flex;flex-direction: row;margin:0 auto;">
+<!--内推官名片-->
+<!--卡片：按列排-->
+<view style="width: 600rpx; height: 240rpx; background-color: #ffc93c;border-top-left-radius: 60rpx;border-top-right-radius: 10rpx;border-bottom-left-radius: 10rpx;border-bottom-right-radius: 100rpx;display: flex;flex-direction: column;margin:0 auto;">
+
+<!--头像文字按行排-->
+<view style="display: flex;flex-direction: row;">
+<!--头像-->
+<view style="border-radius: 50%;width: 90rpx;height: 90rpx;border: solid 10rpx #dbf6e9;"></view>
+<!--头像-->
+
+<!--姓名和职位：按列排-->
+<view style="display: flex;flex-direction: column;margin-left: 30rpx;margin-top: 20rpx;">
+<view style="font-size: 26rpx;font-weight: 700;color: #31326f;">朱寒婷</view>
+
+<!--公司职位：按行排-->
+<view style="display: flex;flex-direction: row;margin-top: 15rpx;">
+<view style="font-size: 22rpx;font-weight: 700;color: #0084b7;">字节跳动</view>
+<view style="width: 20rpx;height: 20rpx;"></view>
+<view style="width: 7rpx;height: 25rpx;background-color: #31326f;"></view>
+<view style="width: 20rpx;height: 20rpx;"></view>
+<view style="font-size: 22rpx;font-weight: 700;color: #0084b7;">大数据产品经理</view>
+</view>
+<!--公司职位：按行排-->
+</view>
+<!--姓名和职位：按列排-->
+</view>
+<!--头像文字按行排-->
+
+<!--其他内容按行排-->
+<view style="display: flex;flex-direction: row;">
+<!--内推岗位-->
+<view style="width: 220rpx;height: 90rpx;border-radius: 10rpx;background-color: #dbf6e9;margin-top: 20rpx;margin-left: 20rpx;display: flex;flex-direction: column;">
+<view style="font-size: 18rpx;font-weight: 700;color: #0084b7;width: 220prx;height: 45rpx;text-align: center;line-height: 45rpx;">内推岗位</view>
+<view style="font-size: 22rpx;font-weight: 700;color: #31326f;width: 220rpx;height: 45rpx;text-align: center;line-height: 45rpx;">大数据工程师</view>
+</view>
+<!--内推岗位-->
+
+<!--包裹详情和联系，因为这两个不好排版-->
+<view style="display: flex;">
+<!--联系-->
+<view style="width: 200rpx;height: 50rpx;border-radius: 10rpx;background-color: #31326f;position: relative;top: 80rpx;left: 80rpx;z-index: 2;">
+<view style="height: 50rpx;font-size: 18rpx;font-weight: 700;color: #ffc93c;margin-left: 60rpx;line-height: 50rpx;">联系</view>
+</view>
+<!--联系-->
+<!--详情圆片-->
+<view style="border-radius: 50%;width: 140rpx;height: 140rpx;border: 10rpx solid #dbf6e9;position: relative; right: 0rpx;bottom: 30rpx;background-color: #31326f;z-index: 3;">
+<view style="display:flex;flex-direction: column;">
+<view style="margin-top: 20rpx;margin-left: 45rpx;">
+<image style="width: 50rpx;height: 50rpx;" src="../../../images/icon/accept_y.png"></image>
+</view> 
+<view style="font-size: 18rpx;font-weight: 700;color: #ffc93c;margin-left: 50rpx;;">通过</view>
+</view>
+</view>
+<!--详情圆片-->
+</view>
+<!--包裹详情和联系，因为这两个不好排版-->
+</view>
+<!--其他内容按行排-->
+</view>
+<!--卡片：按列排-->
+<!--内推官名片-->
+<!--删除-->
+<view wx:if="{{showDelete==1}}" style="width: 60rpx;height: 240rpx;border-radius: 10rpx;background-color: #31326f;margin-left: 30rpx;">
+<view style="margin-top: 95rpx;margin-left: 5rpx;">
+<image style="width: 50rpx;height: 50rpx;" src="../../../images/icon/bin_y.png"></image>
+</view>
+</view>
+<!--删除-->
+</view>
+<!--对你感兴趣-->
+</scroll-view>
+
+</view>
+<!--排版-->
+
+
+<!--底部导航栏-->
+<view style="width: 600rpx;height: 100rpx;border:solid 10rpx #dbf6e9;border-radius: 55rpx;background-color: #31326f;position: fixed;bottom: 20rpx;left: 75rpx;display: flex;flex-direction: row;">
+<!--个人中心-->
+<view class="centerBtn" hover-class="centerBtn-hover" bindtap="toCenter">
+<view style="margin-left: 70rpx;margin-top: 20rpx;">
+<image style="width: 60rpx;height: 60rpx;" src="../../../images/icon/me_w.png"></image>
+</view>
+</view>
+<!--个人中心-->
+<!--删除1-->
+<view wx:if="{{showDelete==0}}" class="deleteBtn" hover-class="deleteBtn-hover" bindtap="showDeleteEle">
+<view style="margin-left: 170rpx;margin-top: 20rpx;">
+<image style="width: 60rpx;height: 60rpx;" src="../../../images/icon/bin_w.png"></image>
+</view>
+</view>
+<!--删除1-->
+<!--删除2-->
+<view wx:if="{{showDelete==1}}" class="deleteBtn-hover" hover-class="deleteBtn" bindtap="hideDeleteEle">
+<view style="margin-left: 170rpx;margin-top: 20rpx;">
+<image style="width: 60rpx;height: 60rpx;" src="../../../images/icon/bin_w.png"></image>
+</view>
+</view>
+<!--删除2-->
+</view>
+<!--底部导航栏-->
+
+
+
+
+
+
+
+
+
+
+</view>
+<!--背景-->
+
+
+
+
+

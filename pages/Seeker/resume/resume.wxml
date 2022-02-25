@@ -1,0 +1,538 @@
+<view style="width: 750rpx;height: 100vh;background-color: #dbf6e9; ">
+<!--整体按列排版-->
+<view style="display: flex;flex-direction: column;">
+<!--顶部导航-->
+<view style="width: 690rpx;height: 14vh;margin-top: 3vh;margin-left: 30rpx;border-radius: 10rpx;background-color: #31326f;display: flex;flex-direction: row;">
+<!--头像-->
+<view style="border-radius: 50%;background-color: #dbf6e9;width: 120rpx;height: 120rpx;margin-left: 60rpx;margin-top: calc((14vh - 120rpx)/2);"></view>
+<!--头像-->
+<view style="width: 30rpx;"></view><!--间隔-->
+<!--整体布局按列排-->
+<view style="display: flex;flex-direction: column;">
+<view style="font-size: 28rpx;font-weight: 700;color: #ffc93c;margin-top: 50rpx;">Lyric</view>
+<!--简历按钮按行排-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<!--简历下载变化部分1-->
+<view style="width: 160rpx;height: 50rpx;background-color: #dbf6e9;border-radius: 10rpx;display: flex;flex-direction: row;" wx:if="{{false}}">
+<view style="font-size: 18rpx;font-weight: 700;color: #31326f;height: 50rpx;line-height: 50rpx;margin-left: 25rpx;">下载简历</view>
+<view style="display: flex;align-items: center;margin-left: 10rpx;">
+<image style="width: 40rpx;height: 40rpx;" src="../../../images/icon/download_b.png"></image>
+</view>
+</view>
+<!--简历下载变化部分1-->
+
+<!--简历下载变化部分2-->
+<view style="width: 160rpx;height: 50rpx;background-color: #dbf6e9;border-radius: 10rpx;display: flex;flex-direction: row;">
+<view style="font-size: 18rpx;font-weight: 700;color: #31326f;height: 50rpx;line-height: 50rpx;margin-left: 25rpx;">下载简历</view>
+<view style="display: flex;align-items: center;margin-left: 10rpx;">
+<image style="width: 40rpx;height: 40rpx;" src="../../../images/icon/download_b.png"></image>
+</view>
+</view>
+<view style="width: 30rpx;"></view><!--间隔-->
+<view style="width: 160rpx;height: 50rpx;background-color: #dbf6e9;border-radius: 10rpx;display: flex;flex-direction: row;">
+<view style="font-size: 18rpx;font-weight: 700;color: #31326f;height: 50rpx;line-height: 50rpx;margin-left: 25rpx;">更替简历</view>
+<view style="display: flex;align-items: center;margin-left: 10rpx;">
+<image style="width: 40rpx;height: 40rpx;" src="../../../images/icon/instead_b.png"></image>
+</view>
+</view>
+<!--简历下载变化部分2-->
+</view>
+<!--简历按钮按行排-->
+</view>
+<!--整体布局按列排-->
+</view>
+<!--顶部导航-->
+
+<!--轮播图-->
+<swiper bindchange="scroll" class="scroll-view_H"  style="margin-top: 3vh;margin-left: 30rpx; width: 100%; white-space: nowrap;height: 60vh;display: flex;flex-direction: column;" current="{{cur}}">
+<!--基本信息-->
+<swiper-item item-id="baseInfo" style="width: 100%;display: inline-block;width: 690rpx;height: 60vh;">
+<scroll-view scroll-y="true" id="demo1" class="scroll-view-item_H demo-text-1" style="width: 690rpx;height: 60vh;background-color: #9ddfd3;border-radius: 10rpx;display: inline-block;flex-direction: column;">
+<view style="width: 200rpx;height: 60rpx;background-color: #31326f;color: #ffc93c;font-size: 24rpx;font-weight: 700;text-align: center;line-height: 60rpx;margin-left: 245rpx;border-radius: 10rpx;">基本信息</view>
+<view style="height: 30rpx;"></view><!--间隔-->
+<!--输入姓名-->
+<view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">姓名</view>
+<van-field value="{{baseInfo.name}}" custom-style="width: 210rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;over-flow:hidden;display:flex;align-items:center" bind:input="input_name"></van-field>
+</view>
+<!--输入姓名-->
+<!--输入年龄-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">年龄</view>
+<picker style="width: 210rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;" mode="date" start="{{start}}" end="{{now}}" bindchange="bindDateChange" value="{{date}}">
+  <view style="padding-left: 40rpx;">{{baseInfo.birthday}}</view>
+</picker>
+</view>
+<!--输入年龄-->
+<!--输入学历-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">学历</view>
+<picker style="width: 210rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;" value="{{index}}" range="{{array}}"
+bindchange="bindPickerChange">
+<view style="padding-left: 40rpx;">{{baseInfo.qualification_new}}</view>
+</picker>
+</view>
+<!--输入学历-->
+<!--输入手机号-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">手机号</view>
+<van-field value="{{baseInfo.phone}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_phone"></van-field>
+</view>
+<!--输入手机号-->
+
+
+<!--输入邮箱-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">邮箱</view>
+<van-field value="{{baseInfo.email}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_mail"></van-field>
+</view>
+<!--输入邮箱-->
+</scroll-view>
+</swiper-item>
+<!--基本信息-->
+
+<!--教育经历-->
+<swiper-item item-id="eduExp" style="width: 100%;display: inline-block;width: 690rpx;height: 60vh;">
+<scroll-view scroll-y="true" id="demo1" class="scroll-view-item_H demo-text-1" style="width: 690rpx;height: 60vh;background-color: #9ddfd3;border-radius: 10rpx;display: inline-block;flex-direction: column;">
+<view style="width: 200rpx;height: 60rpx;background-color: #31326f;color: #ffc93c;font-size: 24rpx;font-weight: 700;text-align: center;line-height: 60rpx;margin-left: 245rpx;border-radius: 10rpx;">教育经历</view>
+
+<!--教育经历的内容-->
+<view style="height: 30rpx;"></view><!--间隔-->
+<!--输入入学年份-->
+<view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">就读时间</view>
+<view style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display: flex;flex-direction: row;">
+<picker style="margin-left: 40rpx;" value="{{resume_edu.eduStart}}" mode="date" fields="month" start="{{start}}" end="{{now}}" bindchange="bindStartDateChange">
+<view>{{resume_edu.eduStart}}</view>
+</picker>
+<view style="margin-left: 20rpx;margin-right: 20rpx;">——</view>
+<picker mode="date" value="{{resume_edu.eduEnd}}" fields="month" start="{{start}}" end="{{now}}" bindchange="bindEndDateChange">
+<view>{{resume_edu.eduEnd}}</view>
+</picker>
+</view>
+</view>
+<!--输入入学年份-->
+<!--输入学校-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">学校</view>
+<van-field value="{{resume_edu.school}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_school"></van-field>
+</view>
+<!--输入学校-->
+
+<!--输入专业-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">专业</view>
+<van-field value="{{resume_edu.major}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_major"></van-field>
+</view>
+<!--输入专业-->
+<!--输入学历-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">学历</view>
+<picker style="width: 210rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;" value="{{index}}" range="{{array}}"
+bindchange="bindnewPickerChange">
+<view style="padding-left: 40rpx;">{{resume_edu.qualification}}</view>
+</picker>
+</view>
+<!--输入学历-->
+<!--输入所在地-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">所在地</view>
+<van-field value="{{resume_edu.edu_location}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_location"></van-field>
+</view>
+<!--输入所在地-->
+<!--输入学习成果-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">学习成果</view>
+<textarea value="{{resume_edu.edu_detail}}" style="width: 450rpx;height: 150rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bindinput="input_detail"></textarea>
+</view>
+<!--输入学习成果-->                                                                                                     <!--教育经历的内容-->      
+
+<!--新增教育经历-->
+<view wx:if="{{edu_show}}">
+<view style="height: 30rpx;"></view><!--间隔-->
+<!--入学年份-->
+<view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">就读时间</view>
+<view style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display: flex;flex-direction: row;">
+<picker style="margin-left: 40rpx;" value="{{new_edu.eduStart}}" mode="date" fields="month" start="{{start}}" end="{{now}}" bindchange="bindStartDateChange1">
+<view>{{new_edu.eduStart}}</view>
+</picker>
+<view style="margin-left: 20rpx;margin-right: 20rpx;">——</view>
+<picker mode="date" value="{{resume_edu.eduEnd}}" fields="month" start="{{start}}" end="{{now}}" bindchange="bindEndDateChange1">
+<view>{{new_edu.eduEnd}}</view>
+</picker>
+</view>
+</view>
+<!--入学年份-->
+<!--学校-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">学校</view>
+<van-field value="{{new_edu.school}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_school1"></van-field>
+</view>
+<!--学校-->
+<!--专业-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">专业</view>
+<van-field value="{{new_edu.major}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_major1"></van-field>
+</view>
+<!--专业-->
+<!--学历-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">学历</view>
+<picker style="width: 210rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;" value="{{index}}" range="{{array}}"
+bindchange="bindnewPickerChange1">
+<view style="padding-left: 40rpx;">{{new_edu.qualification}}</view>
+</picker>
+</view>
+<!--学历-->
+<!--所在地-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">所在地</view>
+<van-field value="{{new_edu.edu_location}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_location1"></van-field>
+</view>
+<!--所在地-->
+<!--学习成果-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">学习成果</view>
+<textarea value="{{new_edu.edu_detail}}" style="width: 450rpx;height: 150rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bindinput="input_detail1"></textarea>
+</view>
+<!--学习成果 -->  
+</view>
+<!--新增教育经历-->
+
+
+<view style="height: 60rpx;"></view>
+<!--添加-->
+<view wx:if="{{!edu_show}}" bindtap="showEdu" style="margin-left: 30rpx;width: 380rpx;height: 50rpx;border-radius: 10rpx;font-size: 22rpx;font-weight: 700;background-color: #31326f;color: #dbf6e9;text-align: center;line-height: 50rpx;">添加另一段教育经历 +</view>
+<!--添加-->
+<!--添加-->
+<view wx:if="{{edu_show}}" bindtap="hideEdu" style="margin-left: 30rpx;width: 200rpx;height: 50rpx;border-radius: 10rpx;font-size: 22rpx;font-weight: 700;background-color: #31326f;color: #dbf6e9;text-align: center;line-height: 50rpx;">取 消</view>
+<!--添加-->
+
+
+
+
+</scroll-view>
+
+</swiper-item>
+<!--教育经历-->
+
+<!--在校经历-->
+<swiper-item item-id="schoolExp" style="width: 100%;display: inline-block;width: 690rpx;height: 60vh;">
+<scroll-view scroll-y="true" id="demo2" class="scroll-view-item_H demo-text-2" style="width: 690rpx;height: 60vh;background-color: #9ddfd3;border-radius: 10rpx;display: inline-block;flex-direction: column;">
+<view style="width: 200rpx;height: 60rpx;background-color: #31326f;color: #ffc93c;font-size: 24rpx;font-weight: 700;text-align: center;line-height: 60rpx;margin-left: 245rpx;border-radius: 10rpx;">在校经历</view>
+<view style="height: 30rpx;"></view><!--间隔-->
+<!--在校荣誉-->
+<view style="width: 180rpx;height: 70rpx;border-radius: 10rpx;background-color: #ffc93c;margin-left: 30rpx;margin-top: 30rpx;display: flex;flex-direction: row;">
+<view>
+<image style="width: 50rpx;height: 50rpx;margin-top: 10rpx;margin-left: 10rpx;" src="../../../images/icon/award_b.png"></image>
+</view>
+<view style="width: 120rpx;height: 70rpx;text-align: center;line-height: 70rpx;color: #31326f;font-size: 22rpx;font-weight: 700;">在校荣誉</view>
+</view>
+<!--在校荣誉-->
+<!--输入荣誉头衔-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">荣誉头衔</view>
+<van-field value="{{resume_extra.extra_name}}" custom-style="width: 365rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_extraName"></van-field>
+</view>
+<!--输入荣誉头衔-->
+
+<!--输入详情描述-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">详情描述</view>
+<textarea value="{{resume_extra.extra_detail}}" style="width: 450rpx;height: 150rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display: flex;align-items: center;" bind:input="input_extraDetail"></textarea>
+</view>
+<!--输入详情描述-->
+
+<!--添加另一项荣誉-->
+<view style="height: 20rpx;"></view>
+<view style="margin-left: 30rpx;width: 380rpx;height: 50rpx;border-radius: 10rpx;font-size: 22rpx;font-weight: 700;background-color: #0084b7;color: #dbf6e9;text-align: center;line-height: 50rpx;">添加另一项荣誉 +</view>
+<!--添加另一项荣誉-->
+
+<!--学生职务-->
+<view style="width: 180rpx;height: 70rpx;border-radius: 10rpx;background-color: #ffc93c;margin-left: 30rpx;margin-top: 30rpx;display: flex;flex-direction: row;">
+<view>
+<image style="width: 50rpx;height: 50rpx;margin-top: 10rpx;margin-left: 10rpx;" src="../../../images/icon/shield_b.png"></image>
+</view>
+<view style="width: 120rpx;height: 70rpx;text-align: center;line-height: 70rpx;color: #31326f;font-size: 22rpx;font-weight: 700;">学生职务</view>
+</view>
+<!--学生职务-->
+<!--添加另一项学生职务-->
+<view style="height: 20rpx;"></view>
+<view style="margin-left: 30rpx;width: 380rpx;height: 50rpx;border-radius: 10rpx;font-size: 22rpx;font-weight: 700;background-color: #0084b7;color: #dbf6e9;text-align: center;line-height: 50rpx;">添加另一项学生职务 +</view>
+<!--添加另一项学生职务-->
+
+<!--社会实践-->
+<view style="width: 180rpx;height: 70rpx;border-radius: 10rpx;background-color: #ffc93c;margin-left: 30rpx;margin-top: 30rpx;display: flex;flex-direction: row;">
+<view>
+<image style="width: 50rpx;height: 50rpx;margin-top: 10rpx;margin-left: 10rpx;" src="../../../images/icon/volunteer_b.png"></image>
+</view>
+<view style="width: 120rpx;height: 70rpx;text-align: center;line-height: 70rpx;color: #31326f;font-size: 22rpx;font-weight: 700;">社会实践</view>
+</view>
+<!--社会实践-->
+<!--添加另一项社会实践-->
+<view style="height: 20rpx;"></view>
+<view style="margin-left: 30rpx;width: 380rpx;height: 50rpx;border-radius: 10rpx;font-size: 22rpx;font-weight: 700;background-color: #0084b7;color: #dbf6e9;text-align: center;line-height: 50rpx;">添加另一项社会实践 +</view>
+<!--添加另一项社会实践-->
+
+</scroll-view>
+</swiper-item>
+<!--在校经历-->
+
+<!--工作经历-->
+<swiper-item item-id="workExp" style="width: 100%;display: inline-block;width: 690rpx;height: 60vh;">
+
+<scroll-view scroll-y="true" id="demo3" class="scroll-view-item_H demo-text-3" style="width: 690rpx;height: 60vh;background-color: #9ddfd3;border-radius: 10rpx;display: inline-block;flex-direction: column;">
+<view style="width: 200rpx;height: 60rpx;background-color: #31326f;color: #ffc93c;font-size: 24rpx;font-weight: 700;text-align: center;line-height: 60rpx;margin-left: 245rpx;border-radius: 10rpx;">工作经历</view>
+<view style="height: 30rpx;"></view><!--间隔-->
+<!--输入工作时间-->
+<view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">工作时间</view>
+<view style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display: flex;flex-direction: row;">
+<picker style="margin-left: 40rpx;" value="{{resume_job.jobStart}}" mode="date" fields="month" start="{{start}}" end="{{now}}" bindchange="bindJobStartDateChange">
+<view>{{resume_job.jobStart}}</view>
+</picker>
+<view style="margin-left: 20rpx;margin-right: 20rpx;">——</view>
+<picker mode="date" value="{{resume_job.jobEnd}}" fields="month" start="{{start}}" end="{{now}}" bindchange="bindJobEndDateChange">
+<view>{{resume_job.jobEnd}}</view>
+</picker>
+</view>
+</view>
+<!--输入工作时间-->
+<!--输入公司-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">公司</view>
+<van-field value="{{resume_job.company}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_company"></van-field>
+</view>
+<!--输入公司-->
+
+<!--输入岗位-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">岗位</view>
+<van-field value="{{resume_job.position}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_position"></van-field>
+</view>
+<!--输入岗位-->
+<!--输入行业-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">行业</view>
+<van-field value="{{resume_job.industry}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_industry"></van-field>
+</view>
+<!--输入行业-->
+<!--输入工作类型-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">工作类型</view>
+<picker style="width: 210rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;" value="{{index2}}" range="{{jobTypes}}"bindchange="bindPickerChange1">
+<view style="padding-left: 40rpx;">{{resume_job.job_type}}</view>
+</picker>
+</view>
+<!--输入工作类型-->
+<!--输入所在地-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">所在地</view>
+<van-field value="{{resume_job.job_location}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_jobLocation"></van-field>
+</view>
+<!--输入所在地-->
+<!--输入工作成果-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">工作成果</view>
+<textarea value="{{resume_job.job_detail}}" style="width: 450rpx;height: 150rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display: flex;align-items: center;" bind:input="input_jobDetail"></textarea>
+</view>
+<!--输入工作成果-->
+
+<!--添加-->
+<view style="height: 60rpx;"></view>
+<view style="margin-left: 30rpx;width: 380rpx;height: 50rpx;border-radius: 10rpx;font-size: 22rpx;font-weight: 700;background-color: #31326f;color: #dbf6e9;text-align: center;line-height: 50rpx;">添加另一段工作经历 +</view>
+<!--添加-->
+</scroll-view>
+</swiper-item>
+<!--工作经历-->
+
+<!--职业技能-->
+<swiper-item item-id="ability" style="width: 100%;display: inline-block;width: 690rpx;height: 60vh;">
+<scroll-view scroll-y="true" id="demo3" class="scroll-view-item_H demo-text-3" style="width: 690rpx;height: 60vh;background-color: #9ddfd3;border-radius: 10rpx;display: inline-block;flex-direction: column;">
+<view style="width: 200rpx;height: 60rpx;background-color: #31326f;color: #ffc93c;font-size: 24rpx;font-weight: 700;text-align: center;line-height: 60rpx;margin-left: 245rpx;border-radius: 10rpx;">职业技能</view>
+<view style="height: 30rpx;"></view><!--间隔-->
+<!--输入技能-->
+<view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">技能</view>
+<van-field value="{{resume_skill.skill}}" custom-style="width: 210rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_skill"></van-field>
+</view>
+<!--输入技能-->
+
+<!--输入描述-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">描述</view>
+<textarea value="{{resume_skill.skill_detail}}" style="width: 450rpx;height: 150rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;" bindinput="input_skillDetail"></textarea>
+</view>
+<!--输入描述-->
+
+<!--添加-->
+<view style="height: 60rpx;"></view>
+<view style="margin-left: 30rpx;width: 380rpx;height: 50rpx;border-radius: 10rpx;font-size: 22rpx;font-weight: 700;background-color: #31326f;color: #dbf6e9;text-align: center;line-height: 50rpx;">添加另一项职业技能 +</view>
+<!--添加-->
+</scroll-view>
+</swiper-item>
+<!--职业技能-->
+
+<!--期望岗位-->
+<swiper-item item-id="expectJob" style="width: 100%;display: inline-block;width: 690rpx;height: 60vh;">
+<scroll-view scroll-y="true" id="demo3" class="scroll-view-item_H demo-text-3" style="width: 690rpx;height: 60vh;background-color: #9ddfd3;border-radius: 10rpx;display: inline-block;flex-direction: column;">
+<view style="width: 200rpx;height: 60rpx;background-color: #31326f;color: #ffc93c;font-size: 24rpx;font-weight: 700;text-align: center;line-height: 60rpx;margin-left: 245rpx;border-radius: 10rpx;">期望岗位</view>
+<view style="height: 30rpx;"></view><!--间隔-->
+<!--输入期望公司-->
+<view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">期望公司</view>
+<van-field value="{{resume_exp.exp_company}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display: flex;align-items: center;" bind:input="input_expCompany"></van-field>
+</view>
+<!--输入期望公司-->
+
+<!--输入期望岗位-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">期望岗位</view>
+<van-field value="{{resume_exp.exp_position}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display: flex;align-items: center;" bind:input="input_expPosition"></van-field>
+</view>
+<!--输入期望岗位-->
+
+<!--输入期望工作地-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">期望工作地</view>
+<van-field value="{{resume_exp.exp_job_location}}"  custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display: flex;align-items: center;" bind:input="input_expJobLoc"></van-field>
+</view>
+<!--输入期望工作地-->
+
+
+<!--输入期望薪资-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">期望薪资</view>
+<van-field value="{{resume_exp.exp_salary}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display: flex;align-items: center;" bind:input="input_salary"></van-field>
+</view>
+<!--输入期望薪资-->
+
+
+
+
+
+<!--输入工作类型-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">工作类型</view>
+<picker style="width: 210rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;" value="{{index2}}" range="{{jobTypes}}"bindchange="bindPickerChange2">
+<view style="padding-left: 40rpx;">{{resume_exp.exp_job_type}}</view>
+</picker>
+</view>
+<!--输入工作类型-->
+
+<!--输入详细描述-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">其他信息</view>
+<textarea value="{{resume_exp.exp_detail}}" style="width: 450rpx;height: 150rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;" bindinput="input_expDetail"></textarea>
+</view>
+<!--输入详细描述-->
+
+<!--添加-->
+<view style="height: 60rpx;"></view>
+<view style="margin-left: 30rpx;width: 380rpx;height: 50rpx;border-radius: 10rpx;font-size: 22rpx;font-weight: 700;background-color: #31326f;color: #dbf6e9;text-align: center;line-height: 50rpx;">添加另一个意向 +</view>
+<!--添加-->
+</scroll-view>
+</swiper-item>
+<!--期望岗位-->
+
+
+</swiper>
+<!--轮播图-->
+<!--底部导航栏按行排-->
+<view style="display: flex;flex-direction: row;width: 690rpx;height: 10vh;background-color: #9ddfd3;border-radius: 10rpx;margin:0 auto;">
+<!--标签：基本信息-->
+<view>
+<view style="margin-left: 30rpx;margin-top: 40rpx;">
+<view class="{{currentPage==0?'tabBox-0':'tabBox-1'}}" bindtap="changeTab" data-idx="0">
+<image style="width: 40rpx;height: 40rpx;margin: 5rpx;" src="../../../images/icon/identity_b.png"></image>
+</view>
+</view>
+<view style="font-size: 16rpx;font-weight: 700;color: #31326f;margin-top: 7rpx;margin-left: 22rpx;">基本信息</view>
+</view>
+<!--标签：基本信息-->
+
+<!--标签：教育经历-->
+<view>
+<view style="margin-left: 30rpx;margin-top: 40rpx;">
+<view class="{{currentPage==1?'tabBox-0':'tabBox-1'}}" bindtap="changeTab" data-idx="1">
+<image style="width: 40rpx;height: 40rpx;margin: 5rpx;" src="../../../images/icon/degree_b.png"></image>
+</view>
+</view>
+<view style="font-size: 16rpx;font-weight: 700;color: #31326f;margin-left: 22rpx;margin-top: 7rpx;">教育经历</view>
+</view>
+<!--标签：教育经历-->
+
+<!--标签：在校经历-->
+<view>
+<view style="margin-left: 30rpx;margin-top: 40rpx;">
+<view class="{{currentPage==2?'tabBox-0':'tabBox-1'}}" bindtap="changeTab" data-idx="2">
+<image style="width: 40rpx;height: 40rpx;margin: 5rpx;" src="../../../images/icon/reward_b.png"></image>
+</view>
+</view>
+
+<view style="font-size: 16rpx;font-weight: 700;color: #31326f;margin-left: 22rpx;margin-top: 7rpx;">在校经历</view>
+</view>
+<!--标签：在校经历-->
+
+<!--标签：工作经历-->
+<view>
+<view style="margin-left: 180rpx;margin-top: 40rpx;">
+<view class="{{currentPage==3?'tabBox-0':'tabBox-1'}}" bindtap="changeTab" data-idx="3">
+<image style="width: 40rpx;height: 40rpx;margin: 5rpx;" src="../../../images/icon/job_b.png"></image>
+</view>
+</view>
+
+<view style="font-size: 16rpx;font-weight: 700;color: #31326f;margin-left: 171rpx;margin-top: 7rpx;">工作经历</view>
+</view>
+<!--标签：工作经历-->
+
+<!--标签：职业技能-->
+<view>
+<view style="margin-left: 30rpx;margin-top: 40rpx;">
+<view class="{{currentPage==4?'tabBox-0':'tabBox-1'}}" bindtap="changeTab" data-idx="4">
+<image style="width: 40rpx;height: 40rpx;margin: 5rpx;" src="../../../images/icon/skill_b.png"></image>
+</view>
+</view>
+<view style="font-size: 16rpx;font-weight: 700;color: #31326f;margin-left: 22rpx;margin-top: 7rpx;">职业技能</view>
+</view>
+<!--标签：职业技能-->
+
+<!--标签：期望岗位-->
+<view>
+<view style="margin-left: 30rpx;margin-top: 40rpx;">
+<view class="{{currentPage==5?'tabBox-0':'tabBox-1'}}" bindtap="changeTab" data-idx="5">
+<image style="width: 40rpx;height: 40rpx;margin: 5rpx;" src="../../../images/icon/expect_b.png"></image>
+</view>
+</view>
+<view style="font-size: 16rpx;font-weight: 700;color: #31326f;margin-left: 22rpx;margin-top: 7rpx;">期望岗位</view>
+</view>
+<!--标签：期望岗位-->
+</view>
+<!--底部导航栏按行排-->
+
+
+<!--最底部导航栏-->
+<view style="width: 600rpx;height: 90rpx;background-color: #31326f;border-radius: 45rpx;margin:20rpx auto;display: flex;flex-direction: row;">
+<!---->
+<view class="otherBtn" hover-class="otherBtn-hover" bindtap="toCard">
+<image style="width: 60rpx;height: 60rpx;margin-top: 15rpx;margin-left: 65rpx;" src="../../../images/icon/card_w.png"></image>
+</view>
+<!---->
+<!--个人中心-->
+<view class="centerBtn" hover-class="centerBtn-hover" bindtap="toCenter">
+  <image style="width: 60rpx;height: 60rpx;margin-top: 15rpx;margin-left: 175rpx;" src="../../../images/icon/me_w.png"></image>
+</view>
+<!--个人中心-->
+</view>
+<!--最底部导航栏-->
+</view>
+<!--整体按列排版-->
+
+<!--保存按钮-->
+<view style="border-radius: 50%;width: 140rpx;height: 140rpx;background-color: #31326f;border: solid 10px #dbf6e9;position: relative;left: 285rpx;bottom: 370rpx;">
+<image style="margin:30rpx;width: 80rpx;height: 80rpx;" src="../../../images/icon/save_y.png"></image>
+</view>
+<!--保存按钮-->
+</view>
+<!--背景-->

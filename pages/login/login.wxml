@@ -1,0 +1,91 @@
+<view style="width: 750rpx;height:100vh;position: fixed;z-index: -2;background-color: #9ddfd3;">
+  <view style="width:750rpx;height:40vh;position: fixed;z-index:-1;background-color:#ffc93c;border-bottom-left-radius: 75rpx;border-bottom-right-radius: 75rpx;"></view>
+  <!--Tab标签-->
+<view style="width: 600rpx;display: flex;flex-direction: row;margin-top: 20vh;margin-left: 75rpx">
+<view class="{{display_idx==0?'tabBox-0':'tabBox-1'}}" bindtap="displayChoose" data-idx="0">验证码登录</view>
+<view class="{{display_idx==1?'tabBox-0':'tabBox-1'}}" bindtap="displayChoose" data-idx="1">账号登录</view>
+</view>
+<!--Tab标签-->
+
+<!--登录1-->
+<view wx:if="{{display_idx==0}}" style="margin-left: 75rpx;height: 530rpx;width: 600rpx;background-color: #dbf6e9;display: flex;flex-direction: column;z-index: 1;"> 
+<view style="width: 750rpx;height: 30rpx;"></view><!--间隔-->
+<!--数据输入-->
+<view style="display: flex;flex-direction: column;margin-left: 100rpx;">
+<!--电话输入-->
+<view style="font-size: 24rpx;font-weight: 700;color: #31326f;">Phone</view>
+<van-field value="{{phone}}" custom-style="width: 400rpx;height: 56rpx;border-bottom: #9ddfd3 solid 4rpx;background-color: #b1e5dc;opacity: 0.4;border-top-left-radius: 10rpx;border-top-right-radius: 10rpx;over-flow:hidden;display:flex;align-items:center" bind:input="input_phone"></van-field>
+<!--电话输入-->
+<view style="height: 20rpx;"></view><!--间隔-->
+<!--验证码输入-->
+ <view style="font-size: 24rpx;font-weight: 700;color: #31326f;">code</view>
+<view style="display: flex;flex-direction: row;">
+<van-field value="{{code}}" custom-style="width: 240rpx;height: 56rpx;border-bottom: #9ddfd3 solid 4rpx;background-color: #b1e5dc;opacity: 0.4;display: flex;over-flow:hidden;align-items:center;border-top-left-radius: 10rpx;border-top-right-radius: 10rpx;"bind:input="input_code" ></van-field>
+    <view style="display: inline-block;">
+      <button style="width: 160rpx;height: 56rpx;background-color: #31326f;display: inline-block;font-size: 16rpx;font-weight: 700;color: #ffc93c;text-align: center;line-height: 56rpx;margin-bottom: 2rpx;">获取验证码</button>
+    </view>
+</view>
+<!--验证码输入-->
+</view>
+<!--数据输入-->
+<!--头像-->
+<view style="position: absolute;margin-top: 330rpx;height: 5rpx;background-color: #9ddfd3;width: 240rpx;"></view>
+<view style="position: absolute;height: 5rpx;margin-top: 330rpx;margin-left: 364rpx;background-color: #9ddfd3;width: 240rpx;"></view>
+<view style="width: 120rpx;height: 120rpx;border-radius: 50%;border: solid #9ddfd3 4rpx;margin-left: 240rpx;margin-top: 20rpx;">
+</view>
+<!--头像-->
+<view style="height: 40rpx;"></view>
+<!--login按钮-->
+<view style="width: 400rpx;height: 60rpx;background-color: #ffc93c;margin-left: 100rpx;border-radius: 10rpx;">
+<button bindtap="login" style="height: 50rpx;width: 400rpx;background-color: #31326f; text-align: center;line-height: 50rpx;font-size: 24rpx;font-weight: 700;color: white;">log in</button>
+</view>
+<!--login按钮-->
+</view>
+<!--登录1-->
+
+
+<!--登录2-->
+<view wx:if="{{display_idx==1}}" style="margin-left: 75rpx;height: 530rpx;width: 600rpx;background-color: #dbf6e9;display: flex;flex-direction: column;z-index: 1;"> 
+<view style="width: 750rpx;height: 30rpx;"></view><!--间隔-->
+<!--数据输入-->
+<view style="display: flex;flex-direction: column;margin-left: 100rpx;">
+<!--用户名输入-->
+<view style="font-size: 24rpx;font-weight: 700;color: #262758;">Username</view>
+<van-field value="{{username}}" custom-style="width: 400rpx;height: 56rpx;border-bottom: #9ddfd3 solid 4rpx;background-color: #b1e5dc;opacity: 0.4;border-top-left-radius: 10rpx;border-top-right-radius: 10rpx;over-flow:hidden;display:flex;align-items:center" bind:input="input_username"></van-field>
+<!--用户名输入-->
+<view style="height: 20rpx;"></view><!--间隔-->
+<!--密码输入-->
+ <view style="font-size: 24rpx;font-weight: 700;color: #31326f;">password</view>
+<van-field value="{{password}}" custom-style="width: 400rpx;height: 56rpx;border-bottom: #9ddfd3 solid 4rpx;background-color: #b1e5dc;opacity: 0.4;display: inline-block;border-top-left-radius: 10rpx;border-top-right-radius: 10rpx;over-flow:hidden;display:flex;align-items:center" bind:input="input_password"></van-field>
+<!--密码输入-->
+</view>
+<!--数据输入-->
+<!--头像-->
+<view style="position: absolute;margin-top: 330rpx;height: 5rpx;background-color: #9ddfd3;width: 240rpx;"></view>
+<view style="position: absolute;height: 5rpx;margin-top: 330rpx;margin-left: 364rpx;background-color: #9ddfd3;width: 240rpx;"></view>
+<view style="width: 120rpx;height: 120rpx;border-radius: 50%;border: solid #9ddfd3 4rpx;margin-left: 240rpx;margin-top: 20rpx;">
+</view>
+<!--头像-->
+<view style="height: 40rpx;"></view>
+<!--login按钮-->
+<view style="width: 400rpx;height: 60rpx;background-color: #ffc93c;margin-left: 100rpx;border-radius: 10rpx;">
+<button style="height: 50rpx;width: 400rpx;background-color: #31326f; text-align: center;line-height: 50rpx;font-size: 24rpx;font-weight: 700;color: white;">log in</button>
+</view>
+<!--login按钮-->
+</view>
+<!--登录2-->
+<view style="height: 40rpx;"></view>
+<view style="display: flex;flex-direction: row;margin-left: 32%;">
+  <view style="font-size: 16rpx;font-weight: 400;color: #0084b7;"> Forget your Password?</view>
+  <view style="width: 25rpx;"></view>
+<view style="font-size: 21rpx;font-weight: 400;color: #31326f;">Retrive</view>
+</view>
+<view style="height: 10rpx;"></view>
+<view style="display: flex;flex-direction: row;margin-left: 32%;">
+  <view style="font-size: 16rpx;font-weight: 400;color: #0084b7;"> Have no Account?</view>
+  <view style="width: 25rpx;"></view>
+<view style="font-size: 21rpx;font-weight: 400;color: #31326f;">Sign Up</view>
+</view>
+
+
+</view>

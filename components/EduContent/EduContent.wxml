@@ -1,0 +1,49 @@
+
+<!--输入入学年份-->
+<view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">就读时间</view>
+<view style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display: flex;flex-direction: row;">
+<picker style="margin-left: 40rpx;" value="{{new_edu.eduStart}}" mode="date" fields="month" start="{{start}}" end="{{now}}" bindchange="bindStartDateChange">
+<view>{{new_edu.eduStart}}</view>
+</picker>
+<view style="margin-left: 20rpx;margin-right: 20rpx;">——</view>
+<picker mode="date" value="{{resume_edu.eduEnd}}" fields="month" start="{{start}}" end="{{now}}" bindchange="bindEndDateChange">
+<view>{{new_edu.eduEnd}}</view>
+</picker>
+</view>
+</view>
+<!--输入入学年份-->
+<!--输入学校-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">学校</view>
+<van-field value="{{new_edu.school}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_school"></van-field>
+</view>
+<!--输入学校-->
+
+<!--输入专业-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">专业</view>
+<van-field value="{{new_edu.major}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_major"></van-field>
+</view>
+<!--输入专业-->
+<!--输入学历-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">学历</view>
+<picker style="width: 210rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;" value="{{index}}" range="{{array}}"
+bindchange="bindnewPickerChange">
+<view style="padding-left: 40rpx;">{{new_edu.qualification}}</view>
+</picker>
+</view>
+<!--输入学历-->
+<!--输入所在地-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">所在地</view>
+<van-field value="{{new_edu.edu_location}}" custom-style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bind:input="input_location"></van-field>
+</view>
+<!--输入所在地-->
+<!--输入学习成果-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">学习成果</view>
+<textarea value="{{new_edu.edu_detail}}" style="width: 450rpx;height: 150rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;display:flex;align-items:center" bindinput="input_detail"></textarea>
+</view>
+<!--输入学习成果 -->                                                                                                     

@@ -1,0 +1,159 @@
+<view style="width: 750rpx;height: 100vh;background-color: #dbf6e9; ">
+<!--整体按列排版-->
+<view style="display: flex;flex-direction: column;">
+<!--顶部导航-->
+<view style="width: 690rpx;height: 14vh;margin-top: 3vh;margin-left: 30rpx;border-radius: 10rpx;background-color: #31326f;display: flex;flex-direction: row;">
+<!--头像-->
+<view style="border-radius: 50%;background-color: #dbf6e9;width: 120rpx;height: 120rpx;margin-left: 60rpx;margin-top: calc((14vh - 120rpx)/2);"></view>
+<!--头像-->
+<view style="width: 30rpx;"></view><!--间隔-->
+<!--整体布局按列排-->
+<view style="display: flex;flex-direction: column;">
+<view style="font-size: 28rpx;font-weight: 700;color: #ffc93c;margin-top: 50rpx;">Lyric</view>
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="color: #dbf6e9;font-size: 18rpx;font-weight: 700;margin-top: 7rpx;">是否帮助别人内推：是</view>
+<view style="margin-left: 20rpx;margin-top: 0;">
+<van-switch checked="{{ true }}"  active-color="#9ddfd3"inactive-color="#0084b7" size="12px" />
+</view>
+</view>
+<view style="display: flex;flex-direction: row;margin-top: 1rpx;">
+<view style="color:#dbf6e9;font-size: 18rpx;font-weight: 700;margin-top: 7rpx;">是否内推我的部门：是</view>
+<view style="margin-left: 20rpx;margin-top: 0;">
+<van-switch checked="{{ false }}" active-color="#9ddfd3"inactive-color="#0084b7" size="12px" />
+</view>
+</view>
+</view>
+<!--整体布局按列排-->
+</view>
+<!--顶部导航-->
+
+<!--标签栏-->
+<view style="width: 600rpx;height: 110rpx;border-radius: 55rpx;background-color: #31326f;margin-left: 70rpx;margin-top: 3vh;display: flex;flex-direction: row;">
+<view class="{{currentPage==0?'tabBox-0':'tabBox-1'}}" bindtap="changeTab" data-idx="0">公司详情</view>
+<view class="{{currentPage==1?'tabBox-0':'tabBox-1'}}" bindtap="changeTab" data-idx="1">职位详情</view>
+<view class="{{currentPage==2?'tabBox-0':'tabBox-1'}}" bindtap="changeTab" data-idx="2">要求详情</view>
+</view>
+<!--标签栏-->
+
+
+<!--轮播图-->
+<swiper style="margin-top: 20rpx;margin-left: 30rpx; width: 100%; white-space: nowrap;width: 690rpx;height: 60vh;" bindchange="scroll" current="{{cur}}">
+<!--公司详情-->
+<swiper-item style="width: 100%;display: inline-block;width: 690rpx;height: 60vh;">
+<scroll-view scroll-y="true" id="demo1" class="scroll-view-item_H demo-text-1" style="width: 690rpx;height: 60vh;background-color: #9ddfd3;border-radius: 10rpx;display: inline-block;flex-direction: column;">
+<view style="height: 30rpx;"></view><!--间隔-->
+<!--输入公司名称-->
+<view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">公司名称</view>
+<input style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"/>
+</view>
+<!--输入公司名称-->
+<!--输入业务领域-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">业务领域</view>
+<input style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"/>
+</view>
+<!--输入业务领域-->
+
+<!--输入需求地区-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">需求地区</view>
+<input style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"/>
+</view>
+<!--输入需求地区-->
+<!--输入公司概述-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">公司概述</view>
+<textarea style="width: 450rpx;height: 300rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"></textarea>
+</view>
+<!--输入公司概述-->
+</scroll-view>
+</swiper-item>
+<!--公司详情-->
+
+<!--职位详情-->
+<swiper-item style="width: 100%;display: inline-block;width: 690rpx;height: 60vh;">
+<scroll-view scroll-y="true" id="demo1" class="scroll-view-item_H demo-text-1" style="width: 690rpx;height: 60vh;background-color: #9ddfd3;border-radius: 10rpx;display: inline-block;flex-direction: column;">
+
+<view style="height: 30rpx;"></view><!--间隔-->
+<!--输入职位名称-->
+<view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">职位名称</view>
+<picker style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;" mode="date" start="2000-1-1" end="2022-2-11"></picker>
+</view>
+<!--输入职位名称-->
+<!--输入从事行业-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">从事行业</view>
+<input style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"/>
+</view>
+<!--输入从事行业-->
+
+<!--输入在招类型-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">在招类型</view>
+<input style="width: 450rpx;height: 50rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"/>
+</view>
+<!--输入在招类型-->
+<!--输入职位描述-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">职位描述</view>
+<textarea style="width: 450rpx;height: 300rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"></textarea>
+</view>
+<!--输入职位描述-->
+
+</scroll-view>
+</swiper-item>
+<!--职位详情-->
+
+<!--要求详情-->
+<swiper-item style="width: 100%;display: inline-block;width: 690rpx;height: 60vh;">
+<scroll-view scroll-y="true" id="demo3" class="scroll-view-item_H demo-text-3" style="width: 690rpx;height: 60vh;background-color: #9ddfd3;border-radius: 10rpx;display: inline-block;flex-direction: column;">
+<view style="height: 30rpx;"></view><!--间隔-->
+<!--输入必备技能-->
+<view style="display: flex;flex-direction: row;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">必备技能</view>
+<textarea style="width: 450rpx;height: 150rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"></textarea>
+</view>
+<!--输入必备技能-->
+<!--输入加分技能-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">加分技能</view>
+<textarea style="width: 450rpx;height: 150rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"></textarea>
+</view>
+<!--输入加分技能-->
+
+<!--输入其他要求-->
+<view style="display: flex;flex-direction: row;margin-top: 20rpx;">
+<view style="width: 180rpx;height: 50rpx;background-color: #dbf6e9;border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;font-size: 22rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 50rpx;margin-left: 30rpx;">其他要求</view>
+<textarea style="width: 450rpx;height: 150rpx;background-color: #dbf6e9;opacity: 0.4;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;"></textarea>
+</view>
+<!--输入其他要求-->
+</scroll-view>
+</swiper-item>
+<!--要求详情-->
+
+</swiper>
+<!--轮播图-->
+
+
+
+
+<!--最底部导航栏-->
+<view style="width: 600rpx;height: 90rpx;background-color: #31326f;border-radius: 45rpx;margin:20rpx auto;display: flex;flex-direction: row;">
+<view class="otherBtn" hover-class="otherBtn-hover" bindtap="save">
+<image style="width: 60rpx;height: 60rpx;margin-top: 15rpx;margin-left: 65rpx;" src="../../../images/icon/save_w.png"></image>
+</view>
+<!--个人中心-->
+<view class="centerBtn" hover-class="centerBtn-hover" bindtap="toCenter">
+  <image style="width: 60rpx;height: 60rpx;margin-top: 15rpx;margin-left: 175rpx;" src="../../../images/icon/me_w.png"></image>
+</view>
+<!--个人中心-->
+</view>
+<!--最底部导航栏-->
+</view>
+<!--整体按列排版-->
+
+
+</view>
+<!--背景-->

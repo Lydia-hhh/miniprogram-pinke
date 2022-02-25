@@ -1,0 +1,25 @@
+<view style="width:750rpx;position: fixed;height: 50vh;background-color: #9ddfd3;z-index: -2;">
+  <view style="width:750rpx;position: fixed;height: 50vh;background-color: #ffc93c;border-bottom-right-radius: 375rpx;z-index: -1;"></view>
+</view>
+<view style="width:750rpx;position: fixed;top: 50vh;height: 50vh;background-color: #ffc93c;z-index: -2;">
+  <view style="width:750rpx;position: fixed;top: 50vh;height: 50vh;background-color:  #9ddfd3 ;border-top-left-radius: 375rpx;z-index: -1;"></view>
+
+</view>
+<!--卡片-->
+<view style="width: 600rpx;height: 300rpx;position: fixed; top: calc(50vh - 150rpx);left: 75rpx; background-color: #31326f;border-radius: 10rpx;">
+<view style="display: flex;flex-direction: column;margin-left: 50rpx;margin-top: 30rpx;">
+<view>
+<image style="width: 70rpx;height: 70rpx;" src="../../images/icon/details_w.png"></image>
+</view>
+<view style="height: 0rpx;"></view><!--间隔-->
+<view style="display: flex;flex-direction: row;">
+<view style="color: #ffc93c;font-size: 36rpx;font-weight: 700;" bindtap="goToCV">填写个人信息和简历</view>
+<view style="width: 15rpx;"></view><!--间隔-->
+<image style="width: 50rpx;height: 50rpx;" src="../../images/icon/arrow_w.png"></image>
+</view>
+<view style="margin-top: 20rpx;margin-left: 425rpx;width: 110rpx;height: 110rpx;border-radius: 50%;background-color: #ffc93c;border: solid 10rpx #9ddfd3;font-size: 24rpx;font-weight: 700;color: #31326f;text-align: center;line-height: 110rpx;" bindtap="goToSearch">跳过</view>
+</view>
+
+
+</view>
+<!--卡片-->

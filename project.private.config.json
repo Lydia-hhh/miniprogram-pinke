@@ -1,0 +1,96 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "登录-验证码/密码",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "登录-完善简历",
+          "pathName": "pages/CVEntry/CVEntry",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "求职者-联系内推官",
+          "pathName": "pages/Seeker/ContactBoss/ContactBoss",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "求职者-寻内推",
+          "pathName": "pages/Seeker/SearchJob/SearchJob",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "求职者-个人中心",
+          "pathName": "pages/Seeker/PersonalCenter/PersonalCenter",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "内推官-我的求职者",
+          "pathName": "pages/Boss/MyWorker/MyWorker",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "内推官-帮内推",
+          "pathName": "pages/Boss/SearchWorker/SearchWorker",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "求职者-简历",
+          "pathName": "pages/Seeker/resume/resume",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "内推官-个人中心",
+          "pathName": "pages/Boss/PersonalCenter/PersonalCenter",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "内推官-内推工作详情",
+          "pathName": "pages/Boss/JobDetails/JobDetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "名片",
+          "pathName": "pages/BusinessCard/BusinessCard",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "测试",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
